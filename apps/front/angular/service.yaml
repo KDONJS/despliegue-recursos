@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: green-platform-frontend-service
+  namespace: develop
+spec:
+  selector:
+    app: green-platform-frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer

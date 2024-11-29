@@ -1,0 +1,11 @@
+resource_group_name = "pe-bcp-green-platform"
+location            = "East US 2"
+vnet_name           = "GreenPlatformVnet"
+aks_subnet_name     = "aksGreenPlatformSubnet"
+gateway_subnet_name = "GatewayGreenPlatformSubnet"
+aks_cluster_name    = "AKSGreenPlatform"
+dns_prefix          = "GreenPlatform"
+node_count          = 1
+vm_size             = "Standard_B2s"
+appgw_name          = "GreenPlatformGateway"
+acr_name            = "ACRGreenPlatform"

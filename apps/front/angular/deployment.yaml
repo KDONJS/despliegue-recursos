@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: green-platform-frontend-deployment
+  namespace: develop
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: green-platform-frontend
+  template:
+    metadata:
+      labels:
+        app: green-platform-frontend
+    spec:
+      containers:
+      - name: green-platform-frontend
+        image: mimiluciana/green-platform:1.1.0
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: dockerhubsecret-green-front
